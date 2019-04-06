@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>C&#43;&#43;14 on feature.cpp #nakamecpp</title>
+    <link>http://feature-cpp.github.io/feature-cpp/c&#43;&#43;14/</link>
+    <description>Recent content in C&#43;&#43;14 on feature.cpp #nakamecpp</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 11 Mar 2019 00:30:00 +0900</lastBuildDate>
+    
+	<atom:link href="http://feature-cpp.github.io/feature-cpp/c++14/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>開催まとめ</title>
+      <link>http://feature-cpp.github.io/feature-cpp/c&#43;&#43;14/summary/</link>
+      <pubDate>Sun, 31 Mar 2019 00:30:00 +0900</pubDate>
+      
+      <guid>http://feature-cpp.github.io/feature-cpp/c&#43;&#43;14/summary/</guid>
+      <description>開催履歴 ebisu_feature.cpp vol.3 日時 : Jan 11, 2018 告知 : https://ebisu-effective-modern-cpp.connpass.com/event/76028/ 紹介役: 鳥頭かりやマン @kariya_mitsuru 資料 : C++14 すごーい！たーのしー！！！ C++14ライブラリ編 https://speakerdeck.com/kariyamitsuru/new-features-of-c-plus-plus-14-library C++14 演算子関数オブジェクトの</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>C&#43;&#43;17 on feature.cpp #nakamecpp</title>
+    <link>http://feature-cpp.github.io/feature-cpp/tags/c&#43;&#43;17/</link>
+    <description>Recent content in C&#43;&#43;17 on feature.cpp #nakamecpp</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 31 Mar 2019 00:30:00 +0900</lastBuildDate>
+    
+	<atom:link href="http://feature-cpp.github.io/feature-cpp/tags/c++17/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>開催まとめ</title>
+      <link>http://feature-cpp.github.io/feature-cpp/c&#43;&#43;17/summary/</link>
+      <pubDate>Sun, 31 Mar 2019 00:30:00 +0900</pubDate>
+      
+      <guid>http://feature-cpp.github.io/feature-cpp/c&#43;&#43;17/summary/</guid>
+      <description>次回予定 2019/5ごろ、開催予定中です nakameguro_feature.cpp vol.18 日時 : Mar 28, 2019 告知 : https://ebisu-effective-modern-cpp.connpass.com/event/125272/ 紹介役: 鳥頭かりやマン @kariya_mitsuru 資料 : C++17の新機能 落ち穂拾い https://speakerdeck.com/kariyamitsuru/new-features-of-c-plus-plus-17-gleaner C++17 ラムダ式での*</description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43;17</title>
+      <link>http://feature-cpp.github.io/feature-cpp/c&#43;&#43;17/</link>
+      <pubDate>Mon, 11 Mar 2019 00:30:00 +0900</pubDate>
+      
+      <guid>http://feature-cpp.github.io/feature-cpp/c&#43;&#43;17/</guid>
+      <description>C++17の機能一覧 勉強会を開催した回をカッコ内に記載しています C++17 言語編 変数・データ構造関係 十六進浮動小数点数リテラル インライン変数 (vol.4) 構造化</description>
+    </item>
+    
+  </channel>
+</rss>

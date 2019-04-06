@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>C&#43;&#43;17 - feature.cpp #nakamecpp</title>
+<meta name="description" content="description">
+<meta name="generator" content="Hugo 0.54.0" />
+<link href="http://feature-cpp.github.io/feature-cpp/index.xml" rel="alternate" type="application/rss+xml">
+<link rel="canonical" href="http://feature-cpp.github.io/feature-cpp/c&#43;&#43;17/">
+<link rel="stylesheet" href="http://feature-cpp.github.io/feature-cpp/css/theme.min.css">
+<script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+<link rel="stylesheet" href="http://feature-cpp.github.io/feature-cpp/css/chroma.min.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="http://feature-cpp.github.io/feature-cpp/js/functions.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js"></script>
+<script src="http://feature-cpp.github.io/feature-cpp/js/jquery.backtothetop/jquery.backtothetop.min.js"></script></head>
+<body>
+<div class="container"><header>
+<h1>feature.cpp #nakamecpp</h1>
+
+ <span class="version">Version 2</span>
+<a href="https://github.com/feature-cpp/feature.cpp" class="github"><i class="fab fa-github"></i></a>
+<p class="description">東京・中目黒にて勉強会を開催中</p>
+
+</header>
+<div class="menu">
+<nav>
+<ul>
+<li><a href="/feature-cpp/">Home</a></li>
+<li><a href="https://twitter.com/search?f=tweets&amp;q=nakamecpp">Twitter</a></li></ul>
+</nav>
+</div>
+<div class="content-container">
+<main><h1>C&#43;&#43;17</h1>
+
+<h1 id="c-17の機能一覧">C++17の機能一覧</h1>
+
+<p>勉強会を開催した回をカッコ内に記載しています</p>
+
+<h2 id="c-17-言語編"><code>C++17</code> 言語編</h2>
+
+<p>変数・データ構造関係</p>
+
+<ul>
+<li>十六進浮動小数点数リテラル</li>
+<li>インライン変数 (<a href="./summary/#ebisu-feature-cpp-vol-4">vol.4</a>)</li>
+<li>構造化束縛 (<a href="./summary/#ebisu-feature-cpp-vol-4">vol.4</a>)</li>
+<li>波括弧初期化の型推論の新規則 (<a href="./summary/#ebisu-feature-cpp-vol-4">vol.4</a>)</li>
+<li>[[maybe_unused]]属性 (<a href="./summary/#nakameguro-feature-cpp-vol-6">vol.6</a>)</li>
+<li>[[nodiscard]]属性 (<a href="./summary/#nakameguro-feature-cpp-vol-6">vol.6</a>)</li>
+<li>値のコピー省略を保証 (<a href="./summary/#ebisu-feature-cpp-vol-4">vol.4</a>)</li>
+<li>厳密な式の評価順 (<a href="./summary/#ebisu-feature-cpp-vol-4">vol.4</a>)</li>
+<li>参照メンバをもつクラスの置き換え</li>
+<li>enum class変数の初期値として整数を指定する際の規則を調整</li>
+</ul>
+
+<p>制御構文</p>
+
+<ul>
+<li>if文とswitch文の条件式と初期化を分離 (<a href="./summary/#ebisu-feature-cpp-vol-4">vol.4</a>)</li>
+<li>[[fallthrough]]属性 (<a href="./summary/#nakameguro-feature-cpp-vol-6">vol.6</a>)
+-*範囲 for ループの制限緩和</li>
+</ul>
+
+<p>ラムダ式</p>
+
+<ul>
+<li>ラムダ式での*thisのコピーキャプチャ (<a href="./summary/#nakameguro-feature-cpp-vol-18">vol.18</a>)</li>
+</ul>
+
+<p>テンプレート</p>
+
+<ul>
+<li>畳み込み式 (<a href="./summary/#ebisu-feature-cpp-vol-4">vol.4</a>)</li>
+<li>テンプレートテンプレートパラメータにtypenameキーワードの使用を許可</li>
+<li>クラステンプレートのテンプレート引数推論 (<a href="./summary/#ebisu-feature-cpp-vol-4">vol.4</a>)</li>
+<li>非型テンプレートパラメータのauto宣言 (<a href="./summary/#ebisu-feature-cpp-vol-4">vol.4</a>)</li>
+<li>全ての非型テンプレート引数の定数式評価を許可</li>
+<li>変数テンプレートのデフォルトテンプレート引数を許可</li>
+</ul>
+
+<p>定数式</p>
+
+<ul>
+<li>static_assertのメッセージ省略を許可 (<a href="./summary/#ebisu-feature-cpp-vol-4">vol.4</a>)</li>
+<li>constexprラムダ (<a href="./summary/#ebisu-feature-cpp-vol-4">vol.4</a>)</li>
+<li>if constexpr文 (<a href="./summary/#ebisu-feature-cpp-vol-4">vol.4</a>)</li>
+</ul>
+
+<p>名前空間</p>
+
+<ul>
+<li>入れ子名前空間の定義 (<a href="./summary/#ebisu-feature-cpp-vol-4">vol.4</a>)</li>
+<li>名前空間と列挙子への属性付加を許可 (<a href="./summary/#nakameguro-feature-cpp-vol-6">vol.6</a>)</li>
+<li>using宣言のパック展開</li>
+</ul>
+
+<p>例外</p>
+
+<ul>
+<li>例外仕様を型システムの一部にする (<a href="./summary/#nakameguro-feature-cpp-vol-6">vol.6</a>)</li>
+<li>非推奨だった古い例外仕様を削除 (<a href="./summary/#nakameguro-feature-cpp-vol-6">vol.6</a>)</li>
+</ul>
+
+<p>属性</p>
+
+<ul>
+<li>[[fallthrough]]属性 (<a href="./summary/#nakameguro-feature-cpp-vol-6">vol.6</a>)</li>
+<li>[[maybe_unused]]属性 (<a href="./summary/#nakameguro-feature-cpp-vol-6">vol.6</a>)</li>
+<li>[[nodiscard]]属性 (<a href="./summary/#nakameguro-feature-cpp-vol-6">vol.6</a>)</li>
+<li>名前空間と列挙子への属性付加を許可 (<a href="./summary/#nakameguro-feature-cpp-vol-6">vol.6</a>)</li>
+<li>属性の名前空間指定に繰り返しをなくす (<a href="./summary/#nakameguro-feature-cpp-vol-6">vol.6</a>)</li>
+<li>不明な属性を無視する (<a href="./summary/#nakameguro-feature-cpp-vol-6">vol.6</a>)</li>
+</ul>
+
+<p>プリプロセッサ</p>
+
+<ul>
+<li>__has_include</li>
+</ul>
+
+<p>機能の削除</p>
+
+<ul>
+<li>トライグラフの削除 (<a href="./summary/#ebisu-feature-cpp-vol-4">vol.4</a>)</li>
+<li>非推奨だったregisterキーワードを削除</li>
+<li>非推奨だったbool型に対するインクリメント演算子を削除</li>
+<li>非推奨だった古い例外仕様を削除 (<a href="./summary/#nakameguro-feature-cpp-vol-6">vol.6</a>)</li>
+</ul>
+
+<p>小さな変更</p>
+
+<ul>
+<li>更新された定義済みマクロ</li>
+<li>機能テストマクロ</li>
+<li>noexcept付きのラムダ式から変換する関数ポインタにnoexceptを付加する</li>
+<li>UTF-8文字リテラル</li>
+</ul>
+
+<p>その他</p>
+
+<ul>
+<li>std::*_v (<a href="./summary/#ebisu-feature-cpp-vol-4">vol.4</a>)</li>
+<li>over-aligned型対応new (<a href="./summary/#ebisu-feature-cpp-vol-4">vol.4</a>)</li>
+</ul>
+
+<h2 id="c-17-ライブラリ編"><code>C++17</code> ライブラリ編</h2>
+
+<ul>
+<li>Mathematical special functions</li>
+<li>Filesystem (<a href="./summary/#nakameguro-feature-cpp-vol-15">vol.15</a>)</li>
+<li>Parallelism (<a href="./summary/#ebisu-feature-cpp-vol-5">vol.5</a>)</li>
+<li>New algorithms<br />
+(for_each_n, reduce, transform_reduce, exclusive_scan, inclusive_scan, transform_exclusive_scan, transform_inclusive_scan)</li>
+<li>New type: string_view (and basic_string_view) (<a href="./summary/#nakameguro-feature-cpp-vol-14">vol.14</a>)</li>
+<li>New type: any (<a href="./summary/#nakameguro-feature-cpp-vol-10">vol.10</a>)</li>
+<li>New class template: variant (<a href="./summary/#nakameguro-feature-cpp-vol-11">vol.11</a>)</li>
+<li>New class template: optional(vol.12/<a href="./summary/#nakameguro-feature-cpp-vol-13">vol.13</a>)</li>
+<li>invoke (<a href="./summary/#nakameguro-feature-cpp-vol-16">vol.16</a>)</li>
+<li>is_invocable, is_invocable_r, invoke_result (<a href="./summary/#ebisu-feature-cpp-vol-5">vol.5</a>)</li>
+<li>Elementary string conversions (<a href="./summary/#nakameguro-feature-cpp-vol-18">vol.18</a>)</li>
+<li>Alias template void_t (<a href="./summary/#nakameguro-feature-cpp-vol-6">vol.6</a>)</li>
+<li>Alias template bool_constant (<a href="./summary/#nakameguro-feature-cpp-vol-17">vol.17</a>)</li>
+<li>Logical operation metafunctions (<a href="./summary/#nakameguro-feature-cpp-vol-17">vol.17</a>)</li>
+<li>Traits for SFINAE-friendly swap (<a href="./summary/#nakameguro-feature-cpp-vol-17">vol.17</a>)</li>
+<li>Trait is_aggregate (<a href="./summary/#nakameguro-feature-cpp-vol-17">vol.17</a>)</li>
+<li>Trait has_unique_object_representations</li>
+<li>as_const (<a href="./summary/#nakameguro-feature-cpp-vol-6">vol.6</a>)</li>
+<li>Non-member size, data, empty</li>
+<li>clamp</li>
+<li>gcd and lcm</li>
+<li>Class shared_mutex (<a href="./summary/#nakameguro-feature-cpp-vol-8">vol.8</a>)</li>
+<li>Interference sizes (hardware_{con,de}structive_interference_size) (<a href="./summary/#nakameguro-feature-cpp-vol-8">vol.8</a>)</li>
+<li>Tuple apply (<a href="./summary/#ebisu-feature-cpp-vol-5">vol.5</a>)</li>
+<li>Construction from tuples</li>
+<li>Universal negator not_fn (<a href="./summary/#ebisu-feature-cpp-vol-5">vol.5</a>)</li>
+<li>Memory resources (<a href="./summary/#nakameguro-feature-cpp-vol-9">vol.9</a>)<br />
+(synchronized_pool_resource, unsynchronized_pool_resource, monotonic_buffer_resource)</li>
+<li>A polymorphic allocator (<a href="./summary/#nakameguro-feature-cpp-vol-9">vol.9</a>)<br /></li>
+<li>A polymorphic allocator (<a href="./summary/#nakameguro-feature-cpp-vol-9">vol.9</a>)<br />
+std::pmr::vector&lt;T&gt; = std::vector&lt;T, polymorphic_allocator&lt;T&gt;&gt;</li>
+<li>Searcher functors (<a href="./summary/#nakameguro-feature-cpp-vol-18">vol.18</a>)</li>
+</ul>
+
+<p>既存ライブラリが修正されたもの</p>
+
+<ul>
+<li>uncaught_exceptions() (<a href="./summary/#nakameguro-feature-cpp-vol-6">vol.6</a>)</li>
+<li>Improved insertion for unique-key maps (<a href="./summary/#nakameguro-feature-cpp-vol-7">vol.7</a>)</li>
+<li>Return type of emplace (<a href="./summary/#nakameguro-feature-cpp-vol-18">vol.18</a>)</li>
+<li>Splicing maps and sets (<a href="./summary/#nakameguro-feature-cpp-vol-7">vol.7</a>)</li>
+<li>Non-const string::data</li>
+<li>A variadic version of lock_guard called scoped_lock (<a href="./summary/#nakameguro-feature-cpp-vol-8">vol.8</a>)</li>
+<li>Variable templates for traits (<a href="./summary/#nakameguro-feature-cpp-vol-17">vol.17</a>)</li>
+<li>atomic::is_always_lock_free (<a href="./summary/#nakameguro-feature-cpp-vol-8">vol.8</a>)</li>
+<li>shared_ptr for arrays (<a href="./summary/#nakameguro-feature-cpp-vol-13">vol.13</a>)<br /></li>
+<li>shared_ptr::weak_type  (<a href="./summary/#nakameguro-feature-cpp-vol-13">vol.13</a>)<br /></li>
+<li>std::enable_shared_from_this (<a href="./summary/#nakameguro-feature-cpp-vol-13">vol.13</a>)<br /></li>
+<li>Three-dimensional hypotenuse</li>
+<li>Further uninitialized algorithms</li>
+<li>Incomplete type support for allocators</li>
+<li>Changes to &lt;chrono&gt;</li>
+<li>Constexpr for char_traits</li>
+<li>Improving pair and tuple</li>
+<li>Changes to common_type</li>
+</ul>
+
+<p>Deprecate</p>
+
+<ul>
+<li>shared_ptr::unique (<a href="./summary/#nakameguro-feature-cpp-vol-8">vol.8</a>)</li>
+</ul>
+
+<p>Temporarily discourage</p>
+
+<ul>
+<li>memory_order_consume (<a href="./summary/#nakameguro-feature-cpp-vol-8">vol.8</a>)</li>
+</ul>
+
+<p>その他</p>
+
+<ul>
+<li>C++ refers to C11</li>
+<li>Reserved namespaces</li>
+<li>C library synopses</li>
+<li>Term “forwarding reference”<br />
+Term “default member initializer”<br />
+Term “templated entity”<br />
+Term “contiguous iterator”<br /></li>
+<li>Change “random number generator” to “random bit generator”</li>
+</ul>
+
+<hr />
+
+<p>参考：</p>
+
+<p><a href="https://cpprefjp.github.io/lang/cpp17.html">https://cpprefjp.github.io/lang/cpp17.html</a><br />
+<a href="https://isocpp.org/files/papers/p0636r0.html">https://isocpp.org/files/papers/p0636r0.html</a></p>
+<div class="edit-meta">Last updated on 11 Mar 2019 / Published on 11 Mar 2019<br><a href="https://github.com/feature-cpp//edit/master/content/C&#43;&#43;17%5c_index.md" class="edit-page"><i class="fas fa-pen-square"></i> Edit on GitHub</a></div><nav class="pagination"><a class="nav nav-prev" href="/feature-cpp/c&#43;&#43;14/summary/" title="開催まとめ"><i class="fas fa-arrow-left" aria-hidden="true"></i> Prev - 開催まとめ</a>
+<a class="nav nav-next" href="/feature-cpp/c&#43;&#43;17/summary/" title="開催まとめ">Next - 開催まとめ <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+</nav><footer><p class="powered">Powered by <a href="https://gohugo.io">Hugo</a>. Theme by <a href="https://themes.gohugo.io/hugo-theme-techdoc/">TechDoc</a>. </p>
+</footer>
+</main><div class="sidebar">
+<nav>
+<ul>
+<li class=""><a href="http://feature-cpp.github.io/feature-cpp/">Home</a></li>
+
+<li class=""><a href="/feature-cpp/c&#43;&#43;14/">C&#43;&#43;14</a>
+<ul class="">
+<li class=""><a href="/feature-cpp/c&#43;&#43;14/summary/">開催まとめ</a></li>
+</ul>
+  
+</li>
+
+<li class="parent active"><a href="/feature-cpp/c&#43;&#43;17/">C&#43;&#43;17</a>
+<ul class="sub-menu">
+<li class=""><a href="/feature-cpp/c&#43;&#43;17/summary/">開催まとめ</a></li>
+</ul>
+  
+</li>
+</ul>
+</nav>
+
+
+<div class="sidebar-footer"></div>
+</div>
+</div><a href="#" id="backtothetop-fixed" class="backtothetop"
+ data-backtothetop-duration="600"
+ data-backtothetop-easing="easeOutQuart"
+ data-backtothetop-fixed-fadeIn="1000"
+ data-backtothetop-fixed-fadeOut="1000"
+ data-backtothetop-fixed-bottom="10"
+ data-backtothetop-fixed-right="20">
+<span class="fa-layers fa-fw">
+<i class="fas fa-circle"></i>
+<i class="fas fa-arrow-circle-up"></i>
+</span></a>
+</div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on feature.cpp #nakamecpp</title>
+    <link>http://feature-cpp.github.io/feature-cpp/tags/</link>
+    <description>Recent content in Tags on feature.cpp #nakamecpp</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 31 Mar 2019 00:30:00 +0900</lastBuildDate>
+    
+	<atom:link href="http://feature-cpp.github.io/feature-cpp/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>C&#43;&#43;14</title>
+      <link>http://feature-cpp.github.io/feature-cpp/tags/c&#43;&#43;14/</link>
+      <pubDate>Sun, 31 Mar 2019 00:30:00 +0900</pubDate>
+      
+      <guid>http://feature-cpp.github.io/feature-cpp/tags/c&#43;&#43;14/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43;17</title>
+      <link>http://feature-cpp.github.io/feature-cpp/tags/c&#43;&#43;17/</link>
+      <pubDate>Sun, 31 Mar 2019 00:30:00 +0900</pubDate>
+      
+      <guid>http://feature-cpp.github.io/feature-cpp/tags/c&#43;&#43;17/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
