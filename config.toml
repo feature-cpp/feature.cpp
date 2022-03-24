@@ -1,4 +1,4 @@
-baseurl = "http://feature-cpp.github.io/feature.cpp/"
+baseurl = "https://feature-cpp.github.io/feature.cpp/"
 
 languageCode = "en-us"
 DefaultContentLanguage = "en"
